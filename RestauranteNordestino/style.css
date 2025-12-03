@@ -1,0 +1,334 @@
+.topo {
+    background-image: url("img/restaurante.jpg"); 
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    padding: 120px 0; 
+    color: white; 
+    text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    color: rgb(7, 7, 7);
+}
+
+.header-loja {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.header-conteudo h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.header-conteudo p {
+    margin-bottom: 15px;
+    opacity: 0.9;
+    font-size: 1em;
+}
+
+.btn-info {
+    display: inline-block;
+    color: #FFC107;
+    text-decoration: none;
+    border: 2px solid #FFC107;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-info:hover {
+    background-color: #FFC107;
+    color: #1a1a1a;
+}
+
+.secao-titulo {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.secao-titulo h2 {
+    font-size: 2.5em;
+    color: #333;
+    font-weight: 300;
+}
+
+.cardapio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.cardapio h3 {
+    grid-column: 1 / -1; 
+    font-size: 1.8em;
+    color: #555;
+    margin-top: 10px;
+    border-bottom: 3px solid #FFC107;
+    padding-bottom: 10px;
+}
+
+.item-cardapio {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-cardapio img {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.info-prato {
+    flex-grow: 1;
+}
+
+.info-prato h4 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.info-prato p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.acao-prato {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.preco {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.btn-adicionar {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar:hover {
+    background-color: #3c8d40;
+}
+
+.btn-carrinho-flutuante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.modal-carrinho {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 50px;
+}
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.carrinho-header h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.fechar-carrinho {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fechar-carrinho:hover,
+.fechar-carrinho:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.lista-itens-carrinho {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.item-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.item-carrinho .quantidade {
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+.remover-item {
+    background: none;
+    color: #d9534f;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.8em;
+    margin-left: auto;
+    padding: 5px 8px;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.remover-item:hover {
+    background-color: #f2dede;
+}
+
+.endereco-entrega {
+    margin: 20px 0;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.endereco-entrega h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.endereco-entrega input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.carrinho-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-fechar, .btn-finalizar-pedido {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-fechar {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-fechar:hover {
+    background-color: #bbb;
+}
+
+.btn-finalizar-pedido {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-finalizar-pedido:hover {
+    background-color: #3c8d40;
+}
+
+@media (min-width: 768px) {
+    
+    .cardapio {
+        grid-template-columns: 1fr 1fr; 
+        padding: 40px;
+    }
+    
+    .cardapio h3 {
+        grid-column: 1 / 3;
+    }
+
+    .item-cardapio {
+        display: block; 
+        text-align: left;
+        padding: 20px;
+    }
+    
+    .item-cardapio img {
+        width: 100%; 
+        height: 180px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+    }
+
+    .acao-prato {
+        margin-top: 15px;
+    }
+}
