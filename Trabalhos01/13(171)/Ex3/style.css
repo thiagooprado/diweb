@@ -1,0 +1,19 @@
+body {
+                    font-size: 20px;
+                    font-family: cursive;
+                  }
+                  .titulo {
+                    background-color: coral;
+                  }
+                  .paragrafo {
+                    background-color: darkseagreen;
+                  }
+                  .cor01 {
+                    background-color: turquoise;
+                  }
+                  .cor02 {
+                    background-color: tomato;
+                  }
+                  .cor03 {
+                    background-color: cornflowerblue;
+                  }
