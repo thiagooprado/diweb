@@ -1,0 +1,29 @@
+.container01, .container02, .container03, .container04 {
+                    border: 1px solid #000;
+                    width: 100%;
+                    height: 80px;
+                    display: flex;
+                }
+                .container02 {
+                    flex-direction: row-reverse;
+                }
+                .container03 {
+                    flex-direction: column;
+                }
+                .container04 {
+                    flex-direction: column-reverse;
+                }
+                .box01 {
+                    background-color: blueviolet;
+                }
+                .box02{
+                    background-color: cornflowerblue;
+                }
+                .box03 {
+                    background-color: crimson;
+                }
+                div {
+                    height: 50px;
+                    width: 250px;
+                    margin: 5px;    
+                }
