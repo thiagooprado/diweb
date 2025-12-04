@@ -1,0 +1,3 @@
+label,input[text], input[email], input[file], textarea{
+    display: block;
+}

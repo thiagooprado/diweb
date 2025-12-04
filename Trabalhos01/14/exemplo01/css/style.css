@@ -1,0 +1,19 @@
+body {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+}
+h1 {
+    background-color: tomato;
+    margin: 50px 200px 80px 150px;
+}
+p {
+    background-color: darkcyan;
+}
+.centralizado {
+    text-align: center;
+    font-size: 25px;
+    width: 300px;
+    margin: auto;
+    background-color: darkorange;
+}

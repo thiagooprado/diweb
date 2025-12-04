@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+  }
+  table,
+  td,
+  th {
+    border: 1px solid black;
+    text-align: center;
+  }
+  tfoot {
+    font-weight: 700;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 20px;
+  }

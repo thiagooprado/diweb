@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: cursive, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.fonte01 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+}
+
+.fonte02 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+}

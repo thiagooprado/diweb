@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #6495ed;
+  padding: 20px;
+  text-align: center;
+  height: 60px;
+}
+
+i {
+  color: white;
+  margin: 0 10px;
+}
+
+h1 {
+  font-family: "Segoe UI", sans-serif;
+  margin: 20px 0;
+  text-align: center;
+}
